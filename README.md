@@ -1,30 +1,50 @@
-# Sonar-Rock-vs-Mine-Classification-using-Logistic-Regression-
-This project demonstrates the classification of sonar signals to distinguish between rocks and mines using logistic regression. It is a practical implementation of a machine learning algorithm to solve a binary classification problem.
+Sonar Rock vs Mine Classification using Logistic Regression
+📄 Overview
+This project involves classifying objects as either Rock or Mine using a Logistic Regression model. The dataset contains sonar signal attributes to distinguish between the two classes. The primary objective is to build a predictive system with high accuracy for real-world application in sonar signal classification.
 
-Project Overview
-Sonar data contains frequency and amplitude information of reflected signals that bounce off objects underwater. The goal of this project is to classify these signals into two categories:
+🛠️ Workflow
+Data Preprocessing:
 
-Rocks (R)
-Mines (M)
-The dataset used contains 208 samples with 60 features each, representing sonar readings.
+Loaded the dataset (sonar_data.csv) and analyzed its structure.
+Checked for missing values (none were found).
+Dataset contained 208 samples and 61 columns.
+Exploratory Data Analysis:
 
-Key Features
-Data Preprocessing: The dataset is cleaned and prepared for training, with the features and target variable properly separated.
-Stratified Train-Test Split: Ensures class balance in both training and testing datasets.
-Model Training: Logistic regression is used as the classification model.
-Model Evaluation: Evaluated on training and test data with accuracy scores.
-Results
-Training Accuracy: ~83.42%
-Test Accuracy: ~76.19%
+Described the dataset using statistical summaries (df.describe()).
+Examined class distribution:
+111 Mine samples (M).
+97 Rock samples (R).
+Feature Engineering:
 
-Tools and Libraries Used
-Programming Language: Python
-Libraries:
-Pandas
-NumPy
-Scikit-learn (for Logistic Regression and model evaluation)
+Dropped the target column (60) from features.
+Split the dataset into:
+Features (X) and Target (y).
+Applied stratified splitting to balance the classes during training and testing.
+Model Training:
 
-Insights and Learnings
-Logistic regression can effectively solve binary classification problems with numerical features.
-Proper data preprocessing, such as splitting and reshaping input data, is crucial for model accuracy.
-Achieving high accuracy depends on the quality of the data and hyperparameter tuning.
+Split data into training (90%) and testing (10%) sets.
+Trained a Logistic Regression model using sklearn.
+Achieved:
+Training Accuracy: 83.42%.
+Testing Accuracy: 76.19%.
+Prediction System:
+
+Built a prediction pipeline to classify new sonar signals based on input data.
+Example Input: (0.0262, 0.0582, ..., 0.6473)
+Output Prediction: ['M'] (Mine).
+🧰 Technologies Used
+Python Libraries:
+pandas for data manipulation.
+numpy for numerical computations.
+matplotlib and seaborn for visualization.
+scikit-learn for model training and evaluation.
+📊 Results
+Training Set:
+Logistic Regression achieved an accuracy of 83.42%.
+Test Set:
+Logistic Regression achieved an accuracy of 76.19%.
+Visualizations helped understand the dataset's distribution and class separation.
+🔍 Key Insights
+Logistic Regression is effective in sonar signal classification with acceptable accuracy.
+The dataset is balanced, with no missing values, making it suitable for logistic regression.
+Prediction pipeline can be extended to classify real-time sonar data for practical use.
