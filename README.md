@@ -69,7 +69,3 @@ This project aims to classify objects as either **Rock** or **Mine** using a **L
 
 ---
 
-**Steps:**
-1. Copy the above Markdown content as it is.
-2. Paste it into your `README.md` file in any text editor.
-3. Save and push it to GitHub.
